@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Tommaso</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #0d0d0d;
+            font-family: "Inter", Arial, sans-serif;
+            color: #f2f2f2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* LEFT SIDE */
+        .left {
+            width: 45%;
+            padding: 80px 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid #222;
+        }
+
+        .tag {
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #777;
+        }
+
+        h1 {
+            font-size: 72px;
+            line-height: 1;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 20px;
+            font-weight: 400;
+            color: #aaa;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: #f2f2f2;
+            border-bottom: 1px solid #f2f2f2;
+            padding-bottom: 3px;
+        }
+
+        .description {
+            margin-top: 50px;
+            max-width: 420px;
+            line-height: 1.6;
+            font-size: 17px;
+            color: #ccc;
+        }
+
+        .exercise-links {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .exercise-links a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            border-bottom: 1px solid #f2f2f2;
+            width: fit-content;
+            padding-bottom: 3px;
+        }
+
+        /* RIGHT SIDE — CAROUSEL */
+        .right {
+            width: 55%;
+            padding: 80px 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 650px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .carousel a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .carousel a.active {
+            opacity: 1;
+            z-index: 10;
+            pointer-events: auto;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-title {
+            margin-top: 25px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #f2f2f2;
+            border-bottom: 1px solid #f2f2f2;
+            width: fit-content;
+            padding-bottom: 4px;
+        }
+
+        /* PROJECT SECTIONS */
+        .project-section {
+            padding: 120px 70px;
+            border-top: 1px solid #222;
+        }
+
+        .project-section h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        .project-section h2 {
+            font-size: 22px;
+            margin-top: 10px;
+            color: #aaa;
+        }
+
+        .project-section img {
+            width: 100%;
+            max-width: 900px;
+            margin-top: 40px;
+            border: 1px solid #333;
+        }
+
+        /* GRID FOR MULTIPLE IMAGES */
+        .img-grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .img-grid img {
+            width: 100%;
+            border: 1px solid #333;
+            object-fit: cover;
+        }
+
+        /* Smaller images for "I frutti della giustizia" */
+        .small-grid img {
+            max-height: 260px;
+            object-fit: cover;
+        }
+
+        .project-section p {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 700px;
+            color: #ccc;
+        }
+
+        .date {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #888;
+        }
+
+        /* GLITCH EFFECT */
+        .glitch:hover {
+            animation: glitch 0.25s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-1px, 1px); }
+            40% { transform: translate(1px, -1px); }
+            60% { transform: translate(-1px, -1px); }
+            80% { transform: translate(1px, 1px); }
+            100% { transform: translate(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <div class="container">
+
+        <div class="left">
+            <div class="tag">PORTFOLIO</div>
+
+            <h1>Tommaso</h1>
+            <h2>Studente di grafica a SUPSI CV</h2>
+
+            <div class="social">
+                <a href="https://instagram.com/il._tommy" class="glitch">Instagram · @il._tommy</a>
+            </div>
+
+            <div class="description">
+                Studente del primo anno di Comunicazione Visiva alla SUPSI (CH).  
+                Mi piace esplorare il mondo del design e del multimediale.
+            </div>
+
+            <div class="exercise-links">
+                <a href="esercizio1.html" class="glitch">Esercizio 1 →</a>
+                <a href="esercizio2.html" class="glitch">Esercizio 2 →</a>
+               
+            </div>
+        </div>
+
+        <div class="right">
+
+            <div class="carousel">
+
+                <a href="#progetto1" class="active"><img src="canova.png"></a>
+                <a href="#progetto2"><img src="cineland.png"></a>
+                <a href="#progetto3"><img src="graham's.png"></a>
+                <a href="#progetto4"><img src="storia dello swiss design.png"></a>
+                <a href="#progetto5"><img src="dudovich.png"></a>
+                <a href="#progetto6"><img src="packMarmellata.png"></a>
+                <a href="#progetto7"><img src="porco rosso.png"></a>
+                <a href="#progetto8"><img src="i promessi sposi.png"></a>
+                <a href="#progetto9"><img src="LOGO.png"></a>
+                <a href="#progetto10"><img src="yogorì.png"></a>
+                <a href="#progetto11"><img src="generazione teatro.png"></a>
+                <a href="#progetto12"><img src="autismo.png"></a>
+
+            </div>
+
+            <div id="projectTitle" class="project-title glitch">Canova in Ticino</div>
+
+        </div>
+
+    </div>
+
+    <!-- CAROUSEL SCRIPT -->
+    <script>
+        let index = 0;
+
+        const slides = document.querySelectorAll(".carousel a");
+        const titleBox = document.getElementById("projectTitle");
+
+        const projectNames = [
+            "Canova in Ticino",
+            "CineLand",
+            "Graham's",
+            "Storia dello Swiss Design",
+            "La grafica italiana",
+            "I frutti della giustizia",
+            "Porco rosso",
+            "I promessi sposi",
+            "Monogramma",
+            "Yogorì",
+            "Generazione teatro",
+            "World Autism day"
+        ];
+
+        function changeSlide() {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+            titleBox.textContent = projectNames[index];
+        }
+
+        setInterval(changeSlide, 2000);
+    </script>
+
+    <!-- GLITCH HACKER EFFECT -->
+    <script>
+    document.querySelectorAll(".glitch").forEach(el => {
+        el.addEventListener("mouseover", () => {
+            let original = el.innerText;
+            let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            let iterations = 0;
+
+            let interval = setInterval(() => {
+                el.innerText = original
+                    .split("")
+                    .map((char, i) => {
+                        if (i < iterations) return original[i];
+                        return letters[Math.floor(Math.random() * letters.length)];
+                    })
+                    .join("");
+
+                if (iterations >= original.length) clearInterval(interval);
+                iterations += 1/2;
+            }, 30);
+        });
+    });
+    </script>
+
+    <!-- PROJECT SECTIONS -->
+
+    <!-- PROGETTO 1 -->
+    <section id="progetto1" class="project-section">
+        <h1>Canova in Ticino</h1>
+        <h2>Poster museale</h2>
+        <img src="canova.png">
+        <p>Realizzazione di un poster pubblicitario per la mostra “Canova in Ticino” al Museo Villa Dei Cedri di Bellinzona (CH).</p>
+        <div class="date">Data di realizzazione: 2025</div>
+    </section>
+
+    <!-- PROGETTO 2 -->
+    <section id="progetto2" class="project-section">
+        <h1>CineLand</h1>
+        <h2>Copertina magazine</h2>
+        <img src="cineland.png">
+        <p>Realizzazione di una copertina per il megazine “CINELAND” un megazine incentrato sulle news cinematografiche con focus il collegamento tra il mondo del cinema e la città di Como</p>
+        <div class="date">Data di realizzazione: 2023</div>
+    </section>
+
+    <!-- PROGETTO 3 — Graham's (2 immagini affiancate) -->
+    <section id="progetto3" class="project-section">
+        <h1>Graham's</h1>
+        <h2>Pubblicità</h2>
+
+        <div class="img-grid">
+            <img src="graham's.png">
+            <img src="graham2.png">
+        </div>
+
+        <p>Realizzazione del banner pubblicitario inerente a “Generazione Teatro”, una iniziativa progettata alla conoscenza e frequentazione del teatro anche dalle nuove generazione che stanno sempre più abbandonando i teatri cittadini italiani.</p>
+        <div class="date">Data di realizzazione: 2024</div>
+    </section>
+
+    <!-- PROGETTO 4 -->
+    <section id="progetto4" class="project-section">
+        <h1>Storia dello Swiss Design</h1>
+        <h2>Poster museale</h2>
+        <img src="storia dello swiss design.png">
+        <p>Realizzazione di una locandina per la mostra “Storia del...” per la versione dello “Swiss Design” da allestire nel Museo d'arte della Svizzera italiana utilizzando i colori della bandiera svizzera e, come siluette, troviamo Max Bills</p>
+        <div class="date">Data di realizzazione: 2025</div>
+    </section>
+
+    <!-- PROGETTO 5 -->
+    <section id="progetto5" class="project-section">
+        <h1>La grafica italiana</h1>
+        <h2>Poster museale</h2>
+        <img src="dudovich.png">
+        <p>Realizzazione del manifesto pubblicitario per la mostra “La Grafica Italiana”, avente come oggetto il grafico Dudovich, nella progettazione sono state prese come riferimento l’opera “La Rinascente” e, come struttura, sono presenti le iniziali del grafico “Marcello Dudovich” che, tramite le aste, compongono il tricolore italiano</p>
+        <div class="date">Data di realizzazione: 2024</div>
+    </section>
+
+    <!-- PROGETTO 6 — I frutti della giustizia (7 immagini piccole affiancate) -->
+    <section id="progetto6" class="project-section">
+        <h1>I frutti della giustizia</h1>
+        <h2>Brand Identity</h2>
+
+        <div class="img-grid small-grid">
+            <img src="packMarmellata.png">
+            <img src="pack2.png">
+            <img src="pack3.png">
+            <img src="pack4.png">
+            <img src="pack5.png">
+            <img src="pack6.png">
+            <img src="pack7.png">
+        </div>
+
+        <p>Realizzazione di una brand identity per un brand per “La Casetta di Timmi”, una comunità familiare. Il nome “Frutti della Giustizia” proviene dalla confisca delle proprietà di crimininalità organizzata dove, dopo la confisca, è sorta la struttura della comunità.</p>
+        <div class="date">Data di realizzazione: 2022</div>
+    </section>
+
+    <!-- PROGETTO 7 -->
+    <section id="progetto7" class="project-section">
+        <h1>Porco rosso</h1>
+        <h2>Poster cinematografico</h2>
+        <img src="porco rosso.png">
+        <p>Realizzazione di una locandina per il film “Porco Rosso”, un film di Hayao Miyazaki. La richiesta richiedeva la riprogettazione del poster cinematografico dopo la visione e analisi in classe della pellicola</p>
+        <div class="date">Data di realizzazione: 2023</div>
+    </section>
+
+    <!-- PROGETTO 8 — I promessi sposi (2 immagini affiancate) -->
+    <section id="progetto8" class="project-section">
+        <h1>I promessi sposi</h1>
+        <h2>Editoria e Illustrazone</h2>
+
+        <div class="img-grid">
+            <img src="i promessi sposi.png">
+            <img src="promessi2.png">
+        </div>
+
+        <p>Realizzazione di una copertina per il libro celebre della letteratura italiana “I PROMESSI SPOSI”. La richiesta richiedeva la realizzazione di una copertina (fronte e retro) aggiungendo alcuni esempi di illustrazione interno alle pagine del
+libro.</p>
+        <div class="date">Data di realizzazione: 2023</div>
+    </section>
+
+    <!-- PROGETTO 9 -->
+    <section id="progetto9" class="project-section">
+        <h1>Monogramma</h1>
+        <h2>Logo</h2>
+        <img src="LOGO.png">
+        <p>Realizzazione di un logo utilizzando l’iniziale del nome combinata all’iniziale del cognome seguendo delle forme geometriche lineari. Le linee guida consigliavano l’uso di minimalismo seguendo la regola “Less is More”</p>
+        <div class="date">Data di realizzazione: 2024</div>
+    </section>
+
+    <!-- PROGETTO 10 -->
+    <section id="progetto10" class="project-section">
+        <h1>Yogorì</h1>
+        <h2>Poster pubblicitario</h2>
+        <img src="yogorì.png">
+        <p>Realizzazione di un manifesto inerente a Yogorì, una realtà di produzione di latticini, bisognava specificare la presenza di calcio nello yogurt. Progettato seguendo il flusso dello yogurt creando un’aspirale che, partendo dallo yogurt, sprigiona calcio </p>
+        <div class="date">Data di realizzazione: 2024 </div>
+    </section>
+
+    <!-- PROGETTO 11 — Generazione teatro (2 immagini affiancate) -->
+    <section id="progetto11" class="project-section">
+        <h1>Generazione teatro</h1>
+        <h2>Locandina e Banner pubblicitario</h2>
+
+        <div class="img-grid">
+            <img src="generazione teatro.png">
+            <img src="teatro2.png">
+        </div>
+
+        <p>Realizzazione di un manifesto e un banner web inerente a “Generazione Teatro”, una iniziativa progettata alla conoscenza e frequentazione del teatro anche dalle nuove generazione che stanno sempre più abbandonando i teatri cittadini italiani.</p>
+        <div class="date">Data di realizzazione: 2024</div>
+    </section>
+
+    <!-- PROGETTO 12 -->
+    <section id="progetto12" class="project-section">
+        <h1>World Autism day</h1>
+        <h2>Poster per la sensibilizzazione</h2>
+        <img src="autismo.png">
+        <p>Realizzazione di un poster per la sensibilizzazione della giornata mondiale dello spettro autistico. Lavoro realizzato per la campagnia di sensibilizzazione all'interno dell'istituto ISIS Paolo Carcano (Como, Italia)</p>
+        <div class="date">Data di realizzazione: 2023</div>
+    </section>
+
+</body>
+</html>
